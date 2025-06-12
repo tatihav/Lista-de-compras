@@ -1,33 +1,7 @@
 .hidden{
     display:none !important;
 }
-body{
-    display: flex;
-   text-align: center;
-   justify-content:center;
-   
-  }
-.tela_nome{
-    width: 25%;
-    text-align: center;
-    border: 2px solid #c2185b;
-    margin: 10px;
-    padding: 20px;
-    background-color: #fce4ec;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-}
-.tela_nome h2{
-    color:  #880e4f;
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-.tela_nome p{
-    color:  #880e4f;
-    margin-bottom: 16px;
-    font-size: 20px;
-}
+
 
 #btn_adicionar{
    background: linear-gradient(to bottom, #ec407a, #c2185b);
@@ -38,14 +12,7 @@ body{
     cursor:pointer;
 
 }
-#input_nome{
-    padding: 10px;
-  border: 1px solid #c2185b;
-  border-radius: 6px;
-  width: 180px;
-  margin-right: 10px;
-  font-size: 14px;
-}
+
 #btn_adicionar:hover{
   color:rgb(53, 56, 58);
   background-color: rgba(252, 165, 204, 0.47);
@@ -54,15 +21,9 @@ body{
 /* lista de compras*/
 
 #container{
-      width: 25%;
-    text-align: center;
-    border: 2px solid #c2185b;
-    margin: 10px;
-    padding: 20px;
-    background-color: #fce4ec;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  max-width: 500px;
+  width: 100%;
+   
 }
 #container h1{
     color:  #880e4f;
@@ -81,22 +42,13 @@ body{
     color: white;
     width: 25%;
     height: 20%;
-    border-radius: 4px;
-    cursor:pointer;
-    margin-bottom: 30px;
+  
 }
 #btn_adicionar_item:hover{
   color:rgb(53, 56, 58);
   background-color: rgba(252, 165, 204, 0.47);
 }
-#input_item{
-    padding: 10px;
-  border: 1px solid #c2185b;
-  border-radius: 6px;
-  width: 180px;
-  margin-right: 10px;
-  font-size: 14px;
-}
+
 .lixeira{
   display: flex;
   margin-top : 20px;
