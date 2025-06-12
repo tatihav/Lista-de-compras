@@ -32,5 +32,5 @@ Este é um projeto web simples de **Lista de Compras** com funcionalidades moder
 
 ---
 
-##Desenvolvido por:
+## Desenvolvido por:
 👤Tatiana Havertoh Barbosa

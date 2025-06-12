@@ -19,6 +19,7 @@ let itens = []
 let itemArrastadoIndex = null;
 
 
+
 btn_iniciar.onclick = () => {
     nome_usuario = input_nome.value.trim()
     if (nome_usuario.length <3){
@@ -39,14 +40,16 @@ btn_adicionar_item.onclick = () =>  {
         add_item.focus()
         return
     }
-    itens.push({nome: item, comprado: false})
+    itens.push({nome: item, comprado: false, valor: 0});
     add_item.value = ""
     atualizarlista()
 
 }
 function atualizarlista(){
     lista_compras.innerHTML = "";
+    let total = 0;
     itens.forEach((item, index) => {
+        
      
         const li = document.createElement("li") ;
          li.setAttribute("draggable","true");
@@ -64,9 +67,31 @@ function atualizarlista(){
         atualizarlista();
         
        };
+       const inputValor = document.createElement("input")
+       inputValor.type = "text";
+       inputValor.inputMode = "decimal";
+       inputValor.placeholder = "R$";
+       inputValor.value = item.valor ? item.valor.toFixed(2).replace(",", ".") : "";
+  
+       inputValor.style.marginLeft = "10px";
+       inputValor.style.width = "70px";
+
+       inputValor.oninput = () => {
+        const valorFormatado = inputValor.value.replace(",", ".");
+        item.valor = parseFloat(valorFormatado) || 0;
+     
+
+    };
+    if (item.comprado) {
+        total += item.valor;
+    }
+      
+
+
        li.style.textDecoration = item.comprado ? "line-through" : "none";
        li.appendChild(checkbox);
        li.appendChild(document.createTextNode(" " + item.nome));
+       li.appendChild(inputValor);
       
 
        lista_compras.appendChild(li);
@@ -86,7 +111,9 @@ function atualizarlista(){
         
        const ativos = itens.filter(item => !item.comprado);
         const total_ativos = ativos.length;
-    contador.textContent = `${total_ativos} de ${itens.length} item(ns) pendentes.`;
+
+    contador.innerHTML = `${total_ativos} de ${itens.length} item(ns) pendentes.<br>
+    Total gasto: <strong> R$ ${total.toFixed(2)}</strong>`;
    
 }
 function getNewPosition(container, mousey){
