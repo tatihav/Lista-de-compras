@@ -22,6 +22,7 @@ Este é um projeto web simples de **Lista de Compras** com funcionalidades moder
 - `index.html` — estrutura da página
 - `style.css` — estilo e responsividade
 - `script.js` — lógica da aplicação
+- `Bootstrap` —  responsividade e estilização
 
 ---
 
