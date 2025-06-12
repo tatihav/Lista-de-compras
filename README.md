@@ -7,6 +7,7 @@ Este é um projeto web simples de **Lista de Compras** com funcionalidades moder
 - 🔁 Reordenar a lista com **arrastar e soltar (drag-and-drop)**
 - 🗑️ Arrastar itens para uma **lixeira** para excluí-los
 - 👤 Saudação personalizada com nome do usuário
+- 🧮 Inserção de valores por item e **cálculo automático do total da compra**
 
 ---
 
