@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tela_nome" class="tela_nome">
+        <h2>Bem-vindo(a)!</h2>
+        <p> Digite seu nome para começar: </p>
+        <input type="text" id="input_nome" placeholder="Seu nome..">
+        <button id="btn_adicionar">Iniciar</button>
+        
+    </div>
+    <div id="container" class="hidden">
+        <h1>Lista de Compras</h1>
+        <div id="mensagem_nome"></div>
+        <ul id="lista_compras" ></ul>
+        <div class="add_item" >
+            <input type="text" id="input_item" placeholder="Novo item...">
+            <button id="btn_adicionar_item">Adicionar</button>
+        </div>
+        <div class="status_lista">
+            <span id="contador"></span>
+        </div>
+        <div id="lixeira" class="lixeira">🗑️ Arraste aqui para excluir</div>
+    </div>
+
+   
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
